@@ -19,9 +19,12 @@ def alt_input():
     for i in range(n):
         pass
 
-def output(slideshow):
+def output(slideshow, outfile='output.txt'):
+    out = open(outfile, 'w')
     print(len(slideshow))
+    out.write(str(len(slideshow))+"\n")
     for i in range(1, len(slideshow)):
+        out.write(str(slideshow[i])+ "\n")
         print(slideshow[i])
     return 0
 
